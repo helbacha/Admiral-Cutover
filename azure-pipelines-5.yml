@@ -10,15 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-# Delay v1
-# Delay further execution of a workflow by a fixed time.
-- task: Delay@1
-  inputs:
-    delayForMinutes: '1' # string. Required. Delay Time (minutes). Default: 1.
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    echo "Pipeline is starting..."
+    sleep 60
+    echo "Sleep completed."
+
